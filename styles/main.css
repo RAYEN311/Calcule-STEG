@@ -11,7 +11,7 @@
 }
 html{
     background-color: whitesmoke;
-    overflow: hidden;
+    overflow-x:hidden ;
 }
 nav{
     position: fixed;
@@ -65,6 +65,7 @@ width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     transition: all 1s linear;
+    padding-bottom: 50px;
 }
 #bod .page{
     background-color: var(--secondry-color);
@@ -74,9 +75,31 @@ width: 100%;
     display: flex;
     justify-content: center;
     border: 1px solid white;
-
+    margin-bottom: 50px;
 }
-
+h2{
+    margin-top: 3vh;
+}
+.cent-I{
+    margin-top: 5vh;
+    width: 90vw;
+    height: 70vh;
+    background-color:rgba(9, 0, 14, 0.8);
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    display:flex;
+    /* align-items:center ; */
+    justify-content:center;
+    border: 1px SOLID black;
+}
+table tr td{
+    text-align: center;
+    border: 1px solid black;
+}
+.table_I tr td{
+    border: 1px solid black;
+}
 .cent{
     margin-top: 5vh;
     width: 90vw;
@@ -87,8 +110,18 @@ width: 100%;
     padding: 5px;
     border: 1px SOLID black;
 }
+.form-I{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-I input{
+    width: 150px;
+    height: 20px;
+}
 table{
     color:black;
+    background-color: white;
 }
 table tr td{
     height: 10px;
