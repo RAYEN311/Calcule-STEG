@@ -147,6 +147,30 @@ span{
     border-radius: 5px;
     color:white;
 }
+.grid3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.grid3 div{
+    width: 60vw;
+    margin-top: 50px;
+    color: black;
+    background-color: white;
+    padding: 40px 120px 70px 120px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 3px;
+}
+.grid3 .norme_img{
+    display: flex!important;
+    margin-top: 50px;
+    background-color: whitesmoke;
+    justify-content: space-around;
+    align-items: center!important;
+    margin-bottom: 50px;
+}
 
 @media (max-width:1200px) {
     #bod .page{
