@@ -147,6 +147,49 @@ span{
     border-radius: 5px;
     color:white;
 }
+
+.main_intoduction{
+    margin-top: 50px;
+    width: 80vw;
+    background-color: rgb(9, 7, 63);
+    padding: 40px 50px 70px 50px;
+    border-radius: 20px;
+    height: 60vh;
+    display: block!important;
+}
+.main_intoduction .logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main_intoduction .logos .logoI{
+    width: 17vw;
+    /* background-color: white; */
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+}
+.main_intoduction .rayen{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: 4px solid rgb(0, 0, 0);
+    margin-top: 30px;
+    margin-left: 10px;
+    box-shadow: 0 0 7px 2px white;
+}
+.main_intoduction .description{
+    position: absolute;
+    border-radius: 5px;
+    height: 43vh;
+    width: 50vw;
+    background-color: rgba(0, 0, 0, 0.544);
+    top: 32vh;
+    left: 35vw;
+    border: 1px solid white;
+    
+}
+
+
 .grid3{
     display: flex;
     flex-direction: column;
