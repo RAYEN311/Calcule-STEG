@@ -19,14 +19,17 @@
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////// -->
 <section class="page grid1">
-    <div class="main_intoduction">
+    <div>
     <div class="logos">
-        <img class="logoI" src="./Logo_Societe_tunisienne_electricite_gaz.svg.png" alt="STEG">
-        <img class="logoI" src="./Logo_Societe_tunisienne_electricite_gaz.svg.png" alt="STEG">
+        <img class="logoI" src="./download.png" height="100" alt="iset bizerte">
+        <img class="logoI" src="./Logo_Societe_tunisienne_electricite_gaz.svg.png" height="100" alt="STEG">
+        <img class="logoI" src="./download.jpg" height="100" alt="genie electrique">
     </div>
+    <div class="main_intoduction">
         <img class="rayen" src="./mohamed rayen ben brahim.jpg" alt="rayen">
         <div class="description"></div>
     </div>
+</div>
 
 </section>
 <!-- /////////////////////////////////////////////////////////////////////////////////////// -->
@@ -85,7 +88,8 @@
 <section class="page grid4">
     <div>
     
-    <h2 >Calcule de Puissance total :</h2>
+    <div style="width: 90vw;"><h2 >Calcule de Puissance total :</h2>
+    <h3 style="font-weight:400;color:white;font-family:'Times New Roman', Times">Le processus de détermination de la puissance globale nécessaire pour alimenter tous les équipements d'un bâtiment est une étape essentielle dans la conception, la construction et la gestion de divers types de structures, qu'elles soient résidentielles, commerciales ou industrielles. Il implique l'évaluation de la demande totale en électricité, couvrant des éléments tels que l'éclairage, la climatisation, le chauffage, les appareils ménagers, les machines industrielles, etc. Cette évaluation joue un rôle vital dans le dimensionnement adéquat du réseau électrique, assurant une alimentation fiable et efficace tout en optimisant l'utilisation de l'énergie.</h3></div>
      <div class="cent-I" >
          <div>
             <br>
@@ -106,8 +110,9 @@
     <div style="position: relative; display: flex; align-items:center; justify-content:center;background-color:rgb(85, 91, 255); height:50px;font-size:larger; border:1px solid white;" id="ptt">puissance total = 0 KW</div>
     </div>
      </div>
-
-    <h2>Condition D'occupation du sol :</h2>
+<br><br><br><br>
+    <div style="width: 90vw;"><h2 >Condition D'occupation du sol (propose):</h2>
+        <h3 style="font-weight:400;color:white;font-family:'Times New Roman', Times">tient le compte des besoins potentiels en énergie à l'avenir, ce qui revêt une importance particulière pour les bâtiments en constante évolution. En fin de compte, la détermination de la puissance totale d'un bâtiment est un élément central de la gestion énergétique responsable, visant à garantir un fonctionnement optimal tout en minimisant l'impact sur l'environnement.</h3></div>
      <div class="cent" style="margin-bottom: 50px;">
     <h3 style="margin-left: 20px;"> surface des parcelles (calcul de bilan de puissance)</h3>
     <div class="mx-row">
@@ -155,8 +160,35 @@
 <!-- /////////////////////////////////////////////////////////////////////////////////////// -->
 
 <section class="page grid5">
-    <span>choix de compteur</span>
+    <div class="main_choise">
+    <section style="display: flex ; flex-direction:row;justify-content:space-around;margin-top:30px;  ">
+        <div style="height: 80vh; width:35vw; background-color:rgba(0, 0, 0, 0.16);border-radius:5px; display:flex;justify-content:center;">
+            <div style="display: flex; flex-direction:column;padding:20px">
+               <label for="puissance-compteur" style="color: white;">puissasne consomme</label>
+               <br>
+               <input style="height: 20px;width:30vw;" id="puissance-compteur" type="number" >
+               <br>
+               <input id="tbc" style="height: 25px;" type="button" value="Trouver le bon choix" for="sumbit" >
+               <br>
+               <h2 style="color:#fff;">justification:</h2>
+               <h4 style="background-color:rgba(0, 0, 0, 0.55);padding:30px; color:white;border-radius:5px;" id="justification-a-copie">Le choix d'un compteur électrique monophasé peut être justifié par la taille modeste de l'installation, un budget limité, la simplicité d'installation, une consommation électrique peu élevée, l'utilisation d'appareils monophasés, la disponibilité du service, et la possibilité d'évoluer à l'avenir. Il est essentiel de consulter un professionnel pour évaluer correctement les besoins spécifiques de l'installation.</h4>
+            </div>
+        </div>
+        <div style="height: 80vh; width:40vw; background-color:rgba(0, 0, 0, 0.16);border-radius:5px;">
+            <div id="img-compteurs" style="background-color:rgba(0, 0, 0, 0.127); height: 75vh; width:calc(40vw - 5vh) ; margin:2.5vh 2.5vh; border-radius:4px;display:flex;flex-wrap: wrap; justify-content:center">
+                <div class="compteuri-hov"><img style="object-fit: cover; width:calc(calc(40vw - 5vh)/3);height:calc(calc(40vw - 5vh)/3.5); cursor:pointer; margin:5px; border:1px solid black" src="./compteur/c10.jpg" alt="compteur c10"></div>
+                <div class="compteuri-hov"><img style="object-fit: cover; width:calc(calc(40vw - 5vh)/3);height:calc(calc(40vw - 5vh)/3.5); cursor:pointer; margin:5px; border:1px solid black" src="./compteur/c20.jpg" alt="compteur c20"></div>
+                <div class="compteuri-hov"><img style="object-fit: cover; width:calc(calc(40vw - 5vh)/3);height:calc(calc(40vw - 5vh)/3.5); cursor:pointer; margin:5px; border:1px solid black" src="./compteur/c30.webp" alt="compteur c30"></div>
+                <div class="compteuri-hov"><img style="object-fit: cover; width:calc(calc(40vw - 5vh)/3);height:calc(calc(40vw - 5vh)/3.5); cursor:pointer; margin:5px; border:1px solid black" src="./compteur/c40.webp" alt="compteur c40"></div>
+                <div class="compteuri-hov"><img style="object-fit: cover; width:calc(calc(40vw - 5vh)/3);height:calc(calc(40vw - 5vh)/3.5); cursor:pointer; margin:5px; border:1px solid black" src="./compteur/c50.jpg" alt="compteur c50"></div>
+                <div class="compteuri-hov"><img style="object-fit: cover; width:calc(calc(40vw - 5vh)/3);height:calc(calc(40vw - 5vh)/3.5); cursor:pointer; margin:5px; border:1px solid black" src="./compteur/c60.jpg" alt="compteur c60"></div>
+            </div>
+            <div id="img-compteur" style="display:none;">
 
+            </div>
+        </div>
+    </section>
+    </div>
 </section>
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////// -->

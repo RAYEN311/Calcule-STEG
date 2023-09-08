@@ -152,39 +152,41 @@ span{
     margin-top: 50px;
     width: 80vw;
     background-color: rgb(9, 7, 63);
-    padding: 40px 50px 70px 50px;
+    padding: 40px 50px 40px 50px;
     border-radius: 20px;
-    height: 60vh;
-    display: block!important;
+    height: 40vh;
+    display: flex!important;
+    align-items: center;
 }
-.main_intoduction .logos {
+ .logos {
+    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.main_intoduction .logos .logoI{
-    width: 17vw;
+ .logos .logoI{
     /* background-color: white; */
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
+}
+.grid1{
+    background-color: rgb(217, 217, 217)!important;
 }
 .main_intoduction .rayen{
     height: 250px;
     width: 250px;
     border-radius: 50%;
-    border: 4px solid rgb(0, 0, 0);
-    margin-top: 30px;
+    border: 4px solid rgb(9, 7, 63);
     margin-left: 10px;
     box-shadow: 0 0 7px 2px white;
 }
 .main_intoduction .description{
-    position: absolute;
+    /* position: absolute; */
     border-radius: 5px;
     height: 43vh;
-    width: 50vw;
+    width: 52vw;
     background-color: rgba(0, 0, 0, 0.544);
-    top: 32vh;
-    left: 35vw;
+margin-left: 80px;
     border: 1px solid white;
     
 }
@@ -199,7 +201,6 @@ span{
 }
 .grid3 div{
     width: 60vw;
-    margin-top: 50px;
     color: black;
     background-color: white;
     padding: 40px 120px 70px 120px;
@@ -213,6 +214,23 @@ span{
     justify-content: space-around;
     align-items: center!important;
     margin-bottom: 50px;
+}
+.grid5 .main_choise{
+    background-color: rgba(0, 0, 0, 0.16);
+    height: 100%;
+    
+    width: 80vw;
+}
+.compteuri-hov{
+    cursor: pointer;
+}
+.compteuri-hov:hover::after{
+    content: "";
+    background-color: rgba(0, 0, 0, 0.85);
+    position: absolute;
+    height: calc(calc(40vw - 5vh)/3.49);
+    width: calc(calc(40vw - 5vh)/2.95);
+    transform: translate(calc(-7px - calc(calc(40vw - 5vh)/3)) , 6px);
 }
 
 @media (max-width:1200px) {
