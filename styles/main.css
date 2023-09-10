@@ -185,8 +185,11 @@ span{
     border-radius: 5px;
     height: 43vh;
     width: 52vw;
+    color:white;
+    padding:25px;
+    font-size: 14px;
     background-color: rgba(0, 0, 0, 0.544);
-margin-left: 80px;
+    margin-left: 80px;
     border: 1px solid white;
     
 }
