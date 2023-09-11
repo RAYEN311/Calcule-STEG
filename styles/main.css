@@ -186,8 +186,9 @@ span{
     height: 43vh;
     width: 52vw;
     color:white;
-    padding:25px;
-    font-size: 14px;
+    padding:10px;
+    font-size: 18px;
+    font-weight: 300;
     background-color: rgba(0, 0, 0, 0.544);
     margin-left: 80px;
     border: 1px solid white;
@@ -221,19 +222,80 @@ span{
 .grid5 .main_choise{
     background-color: rgba(0, 0, 0, 0.16);
     height: 100%;
-    
     width: 80vw;
 }
 .compteuri-hov{
     cursor: pointer;
 }
-.compteuri-hov:hover::after{
-    content: "";
-    background-color: rgba(0, 0, 0, 0.85);
+
+.c10:hover::after{
+    content: "compteur:c10  forniseur:STEG  marque:CHINT PEAK : 40 amps duree de vie : + 30000 heurs" ;    color:white;
+     background-color: rgba(0, 0, 0, 0.85);
+    padding: 20px;
     position: absolute;
-    height: calc(calc(40vw - 5vh)/3.49);
-    width: calc(calc(40vw - 5vh)/2.95);
-    transform: translate(calc(-7px - calc(calc(40vw - 5vh)/3)) , 6px);
+    font-size:16px;
+    height: calc((calc(40vw - 5vh)/3.49) - 40px );
+    width: calc((calc(40vw - 5vh)/2.95 ) - 40px);
+    transform: translate(calc(-4px - calc(calc(40vw - 5vh)/3)) , 3px);
+}
+.c20:hover::after{
+    content: "compteur:c20  forniseur:STEG  marque:CHINT PEAK : 40 amps duree de vie : + 20000 heurs" ;    color:white;
+     background-color: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    position: absolute;
+    font-size:16px;
+    height: calc((calc(40vw - 5vh)/3.49) - 40px);
+    width: calc((calc(40vw - 5vh)/2.95 ) - 40px);
+    transform: translate(calc(-4px - calc(calc(40vw - 5vh)/3)) , 3px);
+    
+}
+.c30:hover::after{
+    content: "compteur:c30  forniseur:STEG  marque:CHINT PEAK : 50 amps duree de vie : + 50000 heurs" ;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.85);
+padding: 20px;
+    position: absolute;
+    font-size:16px;
+    height: calc((calc(40vw - 5vh)/3.49) - 40px);
+    width: calc((calc(40vw - 5vh)/2.95 ) - 40px);
+    transform: translate(calc(-4px - calc(calc(40vw - 5vh)/3)) , 3px);
+    
+}
+.c40:hover::after{
+    content: "compteur:c40  forniseur:STEG  marque:CHINT PEAK : 60 amps duree de vie : + 50000 heurs" ;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.85);
+padding: 20px;
+    position: absolute;
+    font-size:16px;
+    height: calc((calc(40vw - 5vh)/3.49) - 40px);
+    width: calc((calc(40vw - 5vh)/2.95 ) - 40px);
+    transform: translate(calc(-4px - calc(calc(40vw - 5vh)/3)) , 3px);
+    
+}
+.c50:hover::after{
+    content: "compteur:c50  forniseur:STEG  marque:CHINT PEAK : 80 amps duree de vie : + 65000 heurs" ;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.85);
+padding: 20px;
+    position: absolute;
+    font-size:16px;
+    height: calc((calc(40vw - 5vh)/3.49) - 40px);
+    width: calc((calc(40vw - 5vh)/2.95 ) - 40px);
+    transform: translate(calc(-4px - calc(calc(40vw - 5vh)/3)) , 3px);
+    
+}
+.c60:hover::after{
+    content: "compteur:c60  forniseur:STEG  marque:CHINT PEAK : 100 amps duree de vie : + 50000 heurs" ;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.85);
+padding: 20px;
+    position: absolute;
+    font-size:16px;
+    height: calc((calc(40vw - 5vh)/3.49) - 40px);
+    width: calc((calc(40vw - 5vh)/2.95 ) - 40px);
+    transform: translate(calc(-4px - calc(calc(40vw - 5vh)/3)) , 3px);
+
 }
 
 @media (max-width:1200px) {
