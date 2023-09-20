@@ -262,7 +262,7 @@ padding: 20px;
     
 }
 .c40:hover::after{
-    content: "compteur:c40  forniseur:STEG  marque:CHINT PEAK : 60 amps duree de vie : + 50000 heurs" ;
+    content: "compteur:c40  forniseur:STEG  marque:SIAME PEAK : 60 amps duree de vie : + 50000 heurs" ;
     color:white;
     background-color: rgba(0, 0, 0, 0.85);
 padding: 20px;
@@ -274,7 +274,7 @@ padding: 20px;
     
 }
 .c50:hover::after{
-    content: "compteur:c50  forniseur:STEG  marque:CHINT PEAK : 80 amps duree de vie : + 65000 heurs" ;
+    content: "compteur:c50  forniseur:STEG  marque:ME345 PEAK : 80 amps duree de vie : + 65000 heurs" ;
     color:white;
     background-color: rgba(0, 0, 0, 0.85);
 padding: 20px;
@@ -286,7 +286,7 @@ padding: 20px;
     
 }
 .c60:hover::after{
-    content: "compteur:c60  forniseur:STEG  marque:CHINT PEAK : 100 amps duree de vie : + 50000 heurs" ;
+    content: "compteur:c60  forniseur:STEG  marque:SOGEMOOM PEAK : 100 amps duree de vie : + 50000 heurs" ;
     color:white;
     background-color: rgba(0, 0, 0, 0.85);
 padding: 20px;

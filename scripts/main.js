@@ -57,3 +57,58 @@ nav_bo.map(but =>{
        console.log(e.target.id)  
     })
 })
+
+
+document.getElementById('tbc').addEventListener('click',()=>{
+var puiss_com_val = document.getElementById('puissance-compteur').value / 1000 ;
+if(puiss_com_val <= 2.2){
+    console.log('c10')
+    document.getElementById('img-compteurs').style.display = 'none';
+    document.getElementById('img-compteur').style.display = 'block';
+    document.getElementById('img-compteur').innerHTML = '<img src="./compteur/c10.jpg" alt="compteur c10" style="height: 80vh; width:40vw; border-radius:5px; object-fit:cover;">'
+    document.getElementById('justification-a-copie').innerHTML = "Le choix de <span style='color:red' >compteur électrique monophasé <b>C10</b></span> est justifié par la puissance de l'installation et qui egale a <span style='color:green;'>" + puiss_com_val + " KVA </span > ,<span style='color:red;'> un budget limité de 470 dt </span> , la simplicité d'installation <span style='color:green'>2 cable entree (phase et neutre) et <span style='color:blue'> 2 cable sortie (phase et neutre) </span> </span> , une consommation électrique peu élevée, l'utilisation d'appareils monophasés et la possibilité d'évoluer à l'avenir <span style='color:red'>s'il depase la limite de courant ( I = 40 ampere ) </span>.";
+    
+}
+else if(puiss_com_val > 2.2 && puiss_com_val <= 4.4){
+    console.log('c20')
+    document.getElementById('img-compteurs').style.display = 'none';
+    document.getElementById('img-compteur').style.display = 'block';
+    document.getElementById('img-compteur').innerHTML = '<img src="./compteur/c20.jpg" alt="compteur c20" style="height: 80vh; width:40vw; border-radius:5px; object-fit:cover;">'
+    
+    document.getElementById('justification-a-copie').innerHTML = "Le choix de <span style='color:red' >compteur électrique monophasé <b>C20</b></span> est justifié par la puissance de l'installation et qui egale a <span style='color:green;'>" + puiss_com_val + " KVA </span > ,<span style='color:red;'> un budget limité de 640 dt </span> , la simplicité d'installation <span style='color:green'>2 cable entree (phase et neutre) et <span style='color:blue'> 2 cable sortie (phase et neutre) </span> </span> , une consommation électrique peu élevée, l'utilisation d'appareils monophasés et la possibilité d'évoluer à l'avenir <span style='color:red'>s'il depase la limite de courant ( I = 40 ampere ) </span>.";
+}
+else if(puiss_com_val > 4.4 && puiss_com_val <= 6.6){
+    console.log('c30')
+    document.getElementById('img-compteurs').style.display = 'none';
+    document.getElementById('img-compteur').style.display = 'block';
+    document.getElementById('img-compteur').innerHTML = '<img src="./compteur/c30.webp" alt="compteur c30" style="height: 80vh; width:40vw; border-radius:5px; object-fit:cover;">'
+    
+    document.getElementById('justification-a-copie').innerHTML = "Le choix de <span style='color:red' >compteur électrique monophasé <b>C30</b></span> est justifié par la puissance de l'installation et qui egale a <span style='color:green;'>" + puiss_com_val + " KVA </span > ,<span style='color:red;'> un budget limité de 790 dt </span> , la simplicité d'installation <span style='color:green'>2 cable entree (phase et neutre) et <span style='color:blue'> 2 cable sortie (phase et neutre) </span> </span> , une consommation électrique peu élevée, l'utilisation d'appareils monophasés et la possibilité d'évoluer à l'avenir <span style='color:red'>s'il depase la limite de courant ( I = 50 ampere ) </span>.";
+}
+else if(puiss_com_val > 6.6 && puiss_com_val <= 8.8){
+    console.log('c40')
+    document.getElementById('img-compteurs').style.display = 'none';
+    document.getElementById('img-compteur').style.display = 'block';
+    document.getElementById('img-compteur').innerHTML = '<img src="./compteur/c40.webp" alt="compteur c40" style="height: 80vh; width:40vw; border-radius:5px; object-fit:cover;">'
+    
+    document.getElementById('justification-a-copie').innerHTML = "Le choix de <span style='color:red' >compteur électrique monophasé <b>C40</b></span> est justifié par la puissance de l'installation et qui egale a <span style='color:green;'>" + puiss_com_val + " KVA </span > ,<span style='color:red;'> un budget limité de 1040 dt </span> , la simplicité d'installation <span style='color:green'>2 cable entree (phase et neutre) et <span style='color:blue'> 2 cable sortie (phase et neutre) </span> </span> , une consommation électrique peu élevée, l'utilisation d'appareils monophasés et la possibilité d'évoluer à l'avenir <span style='color:red'>s'il depase la limite de courant ( I = 60 ampere ) </span>.";
+}
+else if(puiss_com_val > 8.8 && puiss_com_val <= 11){
+    console.log('c50')
+    document.getElementById('img-compteurs').style.display = 'none';
+    document.getElementById('img-compteur').style.display = 'block';
+    document.getElementById('img-compteur').innerHTML = '<img src="./compteur/c50.jpg" alt="compteur c50" style="height: 80vh; width:40vw; border-radius:5px; object-fit:cover;">'
+    
+    document.getElementById('justification-a-copie').innerHTML = "Le choix de <span style='color:red' >compteur électrique monophasé <b>C50</b></span> est justifié par la puissance de l'installation et qui egale a <span style='color:green;'>" + puiss_com_val + " KVA </span > ,<span style='color:red;'> un budget limité de 1300 dt </span> , la simplicité d'installation <span style='color:green'>2 cable entree (phase et neutre) et <span style='color:blue'> 2 cable sortie (phase et neutre) </span> </span> , une consommation électrique peu élevée, l'utilisation d'appareils monophasés et la possibilité d'évoluer à l'avenir <span style='color:red'>s'il depase la limite de courant ( I = 80 ampere ) </span>.";
+}
+else if(puiss_com_val > 11 && puiss_com_val <= 13.2){
+    console.log('c60')
+    document.getElementById('img-compteurs').style.display = 'none';
+    document.getElementById('img-compteur').style.display = 'block';
+    document.getElementById('img-compteur').innerHTML = '<img src="./compteur/c60.jpg" alt="compteur c60" style="height: 80vh; width:40vw; border-radius:5px; object-fit:cover;">'
+    document.getElementById('justification-a-copie').innerHTML = "Le choix de <span style='color:red' >compteur électrique monophasé <b>C60</b></span> est justifié par la puissance de l'installation et qui egale a <span style='color:green;'>" + puiss_com_val + " KVA </span > ,<span style='color:red;'> un budget limité de 1620 dt </span> , la simplicité d'installation <span style='color:green'>2 cable entree (phase et neutre) et <span style='color:blue'> 2 cable sortie (phase et neutre) </span> </span> , une consommation électrique peu élevée, l'utilisation d'appareils monophasés et la possibilité d'évoluer à l'avenir <span style='color:red'>s'il depase la limite de courant ( I = 100 ampere ) </span>.";
+    
+}
+
+
+})
