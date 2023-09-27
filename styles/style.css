@@ -176,3 +176,24 @@ body{
     margin-left: 0px;
   }
 }
+.container .items-elec{
+  position: absolute;
+  height: 275px;
+  width: 50px;
+  background: #fff;
+  left: 50px;
+  transform: translate(calc(90vw * 1.005),calc(-50px * 0.6) );
+}
+.container .items-elec .item_ele {
+  height: 69px;
+  width: 49px;
+  cursor: pointer;
+  border-top: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  transition: scale 0.1s linear;
+}
+.container .items-elec .item_ele:hover {
+  scale: 1.05;
+}

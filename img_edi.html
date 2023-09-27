@@ -9,7 +9,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
   </head>
   <body>
-    <div class="container disable">
+
+    <div class="container disable" >
+    <section class="items-elec">
+        <div class="item_ele ">
+            <div class="poste" style="height:3px; width: 40px; background:#f00;border:1px solid black;">
+                       
+            </div>
+        </div>
+        <div style="display: block;" class="item_ele ">
+            <div  class="pouteau">
+                <div style="height:20px; width : 20px; background-color:white;position:absolute; transform:translate(14px,23px);border :1px solid black;"></div>
+               <div style="height:44px; width:12px; background-color:white;position:absolute; transform:translate(18px,10px);border :1px solid black;"></div>
+               <div style="height:12px; width:40px; background-color:white;position:absolute; transform:translate(5px,27px);border :1px solid black;"></div>
+            </div>
+        </div>
+        <div class="item_ele">
+            <div class="POINT-DE-COPURE" style="height: 30px; width:30px; background:#000;">
+                   
+            </div>
+        </div>
+        <div style="border-bottom: 1px solid black;" class="item_ele">
+            <div class="niche">
+                 
+            </div>
+        </div>
+    </section>
         <h2>choix des lignes</h2>
         <div class="wrapper">
             <div class="editor-panel">
@@ -39,8 +64,11 @@
                     </div>
                 </div>
             </div>
+            
             <div class="preview-img">
+                <div style="position: absolute;transform:translate(0,-180px)">||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</div>
                 <img src="image-placeholder.svg" alt="preview-img">
+                <div style="transform:translate(-740px);"><div style="position: absolute;transform: rotate(90deg);">||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</div></div>
             </div>
         </div>
         <div class="controls">
@@ -51,9 +79,70 @@
                 <button class="save-img">enregistré Image</button>
             </div>
         </div>
+    
+        <div class="bottom_bod">niche</div>
+        <table border="1" style="width: 83.7vw;">
+            <tr>
+                <td>niche *</td>
+                <td>nombre des lignes</td>
+                <td>langeur</td>
+                <td>section</td>
+                <td></td>
+                <td>rotation</td>
+                <td>position X</td>
+                <td>position Y</td>
+            </tr>
+        </table>
+        <div class="bottom_bod">poste</div>
+        <table border="1" style="width: 83.7vw;">
+            <tr>
+                <td>niche *</td>
+                <td>nombre des lignes</td>
+                <td>langeur</td>
+                <td>section</td>
+                <td></td>
+                <td>rotation</td>
+                <td>position X</td>
+                <td>position Y</td>
+            </tr>
+        </table>
+        <div class="bottom_bod">pointage</div>
+        <table border="1" style="width: 83.7vw;">
+            <tr>
+                <td>niche *</td>
+                <td>nombre des lignes</td>
+                <td>langeur</td>
+                <td>section</td>
+                <td></td>
+                <td>rotation</td>
+                <td>position X</td>
+                <td>position Y</td>
+            </tr>
+        </table>
+        <style>
+          .bottom_bod{
+              height: 30px;
+              width: 83.7vw;
+              background-color: black;
+              margin-top: 30px;
+              display: flex;
+              justify-content: center;
+              align-items :center;
+              color :white;
+              border-top-right-radius: 5px;
+              border-top-left-radius: 5px;
+          }
+          tr td {
+            text-align: center;
+        }
+        </style>
+
+    
     </div>
 
     <script src="./scripts/script.js"></script>
-    
+
+
   </body>
+
 </html>
