@@ -21,6 +21,7 @@ body{
 }
 .container{
   width: 90vw;
+  overflow: hidden;
   padding: 30px 35px 35px;
   background: #fff;
   border-radius: 5px;
