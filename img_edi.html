@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Image Editor JavaScript | CodingNepal</title>
+    <title>calcul steg | choix des lignes</title>
     <link rel="stylesheet" href="./styles/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
@@ -13,19 +13,19 @@
     
 <div class="container disable" >
     <section class="items-elec">
-           <div class="item_ele ">
-            <div class="poste" style="height:3px; width: 40px; background:#f00;border:1px solid black;">
+           <div class="item_ele " id="addtable4">
+            <div class="poste" style="height:3px; width: 40px; background:#f00;border:1px solid black;" >
                        
             </div>
         </div>
-        <div style="display: block;" class="item_ele ">
+        <div style="display: block;" class="item_ele " id="addtable5">
             <div  class="pouteau">
                 <div style="height:20px; width : 20px; background-color:white;position:absolute; transform:translate(14px,23px);border :1px solid black;"></div>
                <div style="height:44px; width:12px; background-color:white;position:absolute; transform:translate(18px,10px);border :1px solid black;"></div>
                <div style="height:12px; width:40px; background-color:white;position:absolute; transform:translate(5px,27px);border :1px solid black;"></div>
             </div>
         </div>
-        <div class="item_ele">
+        <div class="item_ele" id="addtable6">
             <div class="POINT-DE-COPURE" style="height: 30px; width:30px; background:#000;">
                    
             </div>
@@ -36,7 +36,7 @@
             </div>
         </div>
     </section>
-        <h2>choix des lignes</h2>
+        <h2>choix des lignes <a target="_blank" style="color:rgb(0, 128, 255)" href="./img_edi.html">****</a></h2>
         <div class="wrapper">
             <div class="editor-panel">
                 <div class="filter">
@@ -66,10 +66,10 @@
                 </div>
             </div>
             
-            <div class="preview-img">
+            <div class="preview-img" id="image_preview">
                 <div style="position: absolute;transform:translate(0,-180px)">||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</div>
-                <img src="image-placeholder.svg" alt="preview-img">
-                <div style="transform:translate(-740px);"><div style="position: absolute;transform: rotate(90deg);">||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</div></div>
+                <div><img src="image-placeholder.svg" style="postion:absolute " alt="preview-img"  ></div>
+                <div style="position:absolute;transform:translate(-35vw)"><div style="position: fixed;transform: rotate(90deg);">|||||||||||||||||||||||||||||||||||||||||||||||||</div></div>
             </div>
         </div>
         <div class="controls">
@@ -121,18 +121,41 @@
         </table>
         <script>
             document.getElementById("addtable1").addEventListener('click',()=>{
-            let divtabe = document.createElement('tr')
-            divtabe.innerHTML = '<td>poste *</td><td>nombre des transformateur</td><td>puissance</td><td>scale</td><td></td><td>rotation</td><td>position X</td><td>position Y</td>'
-            document.getElementById('tab1cl').appendChild(divtabe);
+                let divtabe = document.createElement('tr')
+                divtabe.innerHTML = '<td></td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td><td></td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>'
+                let imgelem = document.createElement('div')
+                imgelem.className = 'item_ele';
+                imgelem.innerHTML = '<div  class="poste" style="postion:absolute;height:3px; width: 40px; background:#f00;border:1px solid black;" ></div>'
+                document.getElementById('image_preview').appendChild(imgelem)
+                document.getElementById('tab1cl').appendChild(divtabe);
             })
             document.getElementById("addtable2").addEventListener('click',()=>{
                 let divtabe = document.createElement('tr')
-                divtabe.innerHTML = '<td>poste *</td><td>nombre des transformateur</td><td>puissance</td><td>scale</td><td></td><td>rotation</td><td>position X</td><td>position Y</td>'
+                divtabe.innerHTML = '<td></td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td><td></td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>'
                 document.getElementById('tab1c2').appendChild(divtabe);
             })
             document.getElementById("addtable3").addEventListener('click',()=>{
                 let divtabe = document.createElement('tr')
-                divtabe.innerHTML = '<td>poste *</td><td>nombre des transformateur</td><td>puissance</td><td>scale</td><td></td><td>rotation</td><td>position X</td><td>position Y</td>'
+                divtabe.innerHTML = '<td></td><td><input type="number"></td><td><input type="number"></td><td></td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>'
+                document.getElementById('tab1c3').appendChild(divtabe);
+            })
+            document.getElementById("addtable4").addEventListener('click',()=>{
+                let divtabe = document.createElement('tr')
+                divtabe.innerHTML = '<td></td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td><td></td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>'
+                let imgelem = document.createElement('div')
+                imgelem.className = 'item_ele';
+                imgelem.innerHTML = '<div  class="poste" style="postion:absolute;height:3px; width: 40px; background:#f00;border:1px solid black; z-index:5555555555555555!important;" ></div>'
+                document.getElementById('image_preview').appendChild(imgelem)
+                document.getElementById('tab1cl').appendChild(divtabe);
+            })
+            document.getElementById("addtable5").addEventListener('click',()=>{
+                let divtabe = document.createElement('tr')
+                divtabe.innerHTML = '<td></td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td><td></td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>'
+                document.getElementById('tab1c2').appendChild(divtabe);
+            })
+            document.getElementById("addtable6").addEventListener('click',()=>{
+                let divtabe = document.createElement('tr')
+                divtabe.innerHTML = '<td></td><td><input type="number"></td><td><input type="number"></td><td></td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>'
                 document.getElementById('tab1c3').appendChild(divtabe);
             })
         </script>
@@ -150,7 +173,14 @@
               border-top-left-radius: 5px;
           }
           tr td {
+              text-align: center;
+              
+              background-color: rgba(00, 12, 200, 0.298);
+            }
+        tr td input{
+            width: 120px;
             text-align: center;
+
         }
         </style>
 
