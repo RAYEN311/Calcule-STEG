@@ -72,6 +72,7 @@ body{
   width: calc(100% / 2 - 4px);
 }
 .editor-panel button:hover{
+  
 }
 .filter button.active{
   color: #000000;
@@ -193,6 +194,7 @@ body{
   display: flex;
   align-items: center;
   justify-content:center;
+  z-index: 10000!important;
   transition: scale 0.1s linear;
 }
 .container .items-elec .item_ele:hover {

@@ -12,6 +12,82 @@ saveImgBtn = document.querySelector(".save-img");
 let brightness = "100", saturation = "100", inversion = "0", grayscale = "0";
 let rotate = 0, flipHorizontal = 1, flipVertical = 1;
 
+
+// const items = document.getElementsByClassName('.postef');
+
+// let currentItemIndex = 0;
+// let initialX = null;
+// let initialY = null;
+// let isDragging = false; // Add a flag to track if dragging is in progress
+
+// items.forEach((item, index) => {
+//     item.addEventListener('mousedown', (e) => {
+//         initialX = e.clientX;
+//         initialY = e.clientY;
+//         item.style.transition = 'none'; // Disable transition during dragging
+//         isDragging = true; // Set the flag to indicate dragging
+//     });
+
+//     item.addEventListener('mousemove', (e) => {
+//         if (isDragging) { // Only move if dragging is in progress
+//             if (initialX === null || initialY === null) {
+//                 return;
+//             }
+
+//             const currentX = e.clientX;
+//             const currentY = e.clientY;
+//             const diffX = currentX - initialX;
+//             const diffY = currentY - initialY;
+
+//             item.style.transform = `translate(${diffX}px, ${diffY}px)`;
+//         }
+//     });
+
+//     item.addEventListener('mouseup', () => {
+//         if (initialX === null || initialY === null) {
+//             return;
+//         }
+
+//         const threshold = 50; // Adjust this value to control the swipe threshold
+
+//         if (initialX - e.clientX > threshold) {
+//             // Swipe left
+//             currentItemIndex = (currentItemIndex + 1) % items.length;
+//         } else if (e.clientX - initialX > threshold) {
+//             // Swipe right
+//             currentItemIndex = (currentItemIndex - 1 + items.length) % items.length;
+//         }
+
+//         item.style.transition = ''; // Re-enable transition
+//         item.style.transform = 'translate(0px, 0px)';
+//         updateDisplay();
+//         initialX = null;
+//         initialY = null;
+//         isDragging = false; // Reset the dragging flag
+//     });
+// });
+
+// function updateDisplay() {
+//     items.forEach((item, index) => {
+//         if (index === currentItemIndex) {
+//             item.style.display = 'block';
+//         } else {
+//             item.style.display = 'none';
+//         }
+//     });
+// }
+
+// updateDisplay();
+
+
+
+
+
+
+
+
+
+
 const loadImage = () => {
     let file = fileInput.files[0];
     if(!file) return;

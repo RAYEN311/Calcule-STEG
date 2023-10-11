@@ -189,13 +189,13 @@
     </div>
     <br><br><br><br>
     <div style="width: 90vw;"><h2 >Condition D'occupation du sol (propose):</h2>
-        <h3 style="font-weight:400;color:white;font-family:'Times New Roman', Times">tient le compte des besoins potentiels en énergie à l'avenir, ce qui revêt une importance particulière pour les bâtiments en constante évolution. En fin de compte, la détermination de la puissance totale d'un bâtiment est un élément central de la gestion énergétique responsable, visant à garantir un fonctionnement optimal tout en minimisant l'impact sur l'environnement.</h3></div>
+        <h3 style="font-weight:400;color:white;font-family:'Times New Roman', Times">Si la consommation est inférieure à 2.400 kwh/an, rien ne change, le coût est de 181 millimes/kwh. 2- Si la consommation est comprise entre 2.401 et 3.600 kwh/an, le coût est de 223 millimes/kwh. 3- Si la consommation est comprise entre 3.601 et 6.000 kwh/an, le coût est de 338 millimes/kwh.</h3></div>
      <div style="margin-bottom: 20px;display:flex; justify-content:center;">
         <img src="./steg-facture.webp" alt="facture">
-        <input placeholder="dernier lecture" style="position: absolute;transform:translate(230px,380px)" type="number">
-        <input placeholder="nouveau lecture" style="position: absolute;transform:translate(230px,420px)" type="number">
-        <input placeholder="type_de_compteur" style="position: absolute;transform:translate(250px,50px)" type="number">
-        <button class="hovn" style="background-color: rgb(0, 162, 255);border:none;border-radius:0 5px 5px 0 ;color:white;cursor:pointer;">resoudre</button>
+        <input id="acf" placeholder="dernier lecture" style="position: absolute;transform:translate(230px,380px)" type="number">
+        <input id="ncf" placeholder="nouveau lecture" style="position: absolute;transform:translate(230px,420px)" type="number">
+        <input id="tcf" placeholder="type_de_compteur" style="position: absolute;transform:translate(250px,50px)" type="number">
+        <button id="comcf" class="hovn" style="background-color: rgb(0, 162, 255);border:none;border-radius:0 5px 5px 0 ;color:white;cursor:pointer;">resoudre</button>
         <style>
             .hovn:hover{
                 background: #000 !important;
@@ -204,9 +204,20 @@
                 scale: 0.95;
             }
         </style>
-
+<script>
+    const prix_unit = 0.181;
+document.getElementById('comcf').addEventListener('click',()=>{
+    var consmat = document.getElementById('ncf').value - document.getElementById('acf').value
+    var tva = 15 + (document.getElementById('tcf').value / 10)
+    var contotal = (((consmat * prix_unit) * 100 ) + tva ) / 100
+    console.log(consmat)
+    console.log(tva)
+    console.log(contotal)
+    document.getElementById('consss').innerText = 'facture en dinar tunisien : ' + contotal + ' dt ||  TVA Compteur : ' + tva + ' %';
+})
+</script>
     </div>
-    <div style="background:#fff;padding:20px;width:60vw;margin:auto;margin-bottom:50px;">facture en dinar tunisien : 0 dt </div>
+    <div style="background:#fff;padding:20px;width:60vw;margin:auto;margin-bottom:50px;" id="consss">facture en dinar tunisien : 0 dt </div>
 </div>
 </section>
 
@@ -241,6 +252,61 @@
             <div id="img-compteur" style="display:none;">
             </div>
         </div>
+    </section>
+    <section style="display: flex ; flex-direction:row;justify-content:space-around;margin-top:30px;  ">
+        <div style="height: 40vh; width:76vw; background-color:rgba(0, 0, 0, 0.16);border-radius:5px; display:flex;justify-content:center;">
+            <div style="display: flex; flex-direction:column;padding:10px">
+                <h1 style="color:white; font-size:20px;">verification de l'etat de compteur (entretien de compteur)</h1>
+                <div>
+                    <label for="lecteur_compteur" style="color:white;">lecteur_compteur</label>
+                    <input style="text-align: center;" id="lecteur_compteur" type="number" value="0">kwh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="lecteur_compteur_etalone" style="color:white;">lecteur_compteur etalone</label>
+                    <input style="text-align: center;" id="lecteur_compteur_etalone" type="number" value="0">kwh
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <button style="font-size:large; height: 50px; width:200px;background:#ffffff;transform:translateX(20vw);border-radius:5px;border:none;box-shadow: 2px 2px 5px 2px;cursor:pointer;" id="but_ver_c" >verifie</button>
+                     <script>
+
+                       document.getElementById('but_ver_c').addEventListener('click',()=>{
+                        var dev_l_c = document.getElementById('lecteur_compteur_etalone').value / document.getElementById('lecteur_compteur').value ;
+                        console.log('clicked')
+                        if(dev_l_c < 1.03 && dev_l_c > 1){
+                            console.log('passable - ')
+                            document.getElementById('but_ver_c').innerText = 'passable -'
+                            document.getElementById('but_ver_c').style.backgroundColor = "#0f0"
+                        }
+                    else if(dev_l_c <= 1 && dev_l_c > 0.97){
+                          console.log('passable + ')
+                            document.getElementById('but_ver_c').style.backgroundColor = "#0f0"
+                            document.getElementById('but_ver_c').innerText = 'passable + '
+                        }
+                        else if(dev_l_c == 1.03){
+                            document.getElementById('but_ver_c').style.backgroundColor = "yellow"
+                            console.log('passable + Y ')
+                        document.getElementById('but_ver_c').innerText = 'passable +'
+                    }
+                        else if(dev_l_c == 0.97){
+                            console.log('passable - Y ')
+                            document.getElementById('but_ver_c').style.backgroundColor = "yellow"
+                    document.getElementById('but_ver_c').innerText = 'passable -'
+                        }
+                        else{
+                            console.log('mauvais')
+                            document.getElementById('but_ver_c').style.backgroundColor = "red"
+                        document.getElementById('but_ver_c').innerText = 'mauvais'
+                        }
+                       })
+        
+                        
+                       
+                     </script>
+                </div>
+
+            </div>
+        </div>
+
     </section>
     <section>
         <iframe  src="./img_edi.html" frameborder="0" style="min-height: 800px; width:80vw;"></iframe>

@@ -14,7 +14,7 @@
 <div class="container disable" >
     <section class="items-elec">
            <div class="item_ele " id="addtable4">
-            <div class="poste" style="height:3px; width: 40px; background:#f00;border:1px solid black;" >
+            <div class="poste" >
                        
             </div>
         </div>
@@ -26,9 +26,7 @@
             </div>
         </div>
         <div class="item_ele" id="addtable6">
-            <div class="POINT-DE-COPURE" style="height: 30px; width:30px; background:#000;">
-                   
-            </div>
+            <div class="POINT-DE-COPURE" ></div>
         </div>
         <div style="border-bottom: 1px solid black;" class="item_ele">
             <div class="niche">
@@ -36,6 +34,15 @@
             </div>
         </div>
     </section>
+    <style>
+        .poste{
+            height:3px; width: 40px; background:#f00;border:1px solid black;
+        }
+        .POINT-DE-COPURE{
+               height: 30px; width:30px; background:#000;
+        }
+
+    </style>
         <h2>choix des lignes <a target="_blank" style="color:rgb(0, 128, 255)" href="./img_edi.html">****</a></h2>
         <div class="wrapper">
             <div class="editor-panel">
@@ -65,11 +72,20 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="preview-img" id="image_preview">
+            <div style="height: 20px; width:150px; position:absolute;right:10vw;">
+            <b>echelle 1 / <input style="width:50px;text-align:center;" id="echelle" type="number"></b>
+            <br>
+            <br>
+            <button style="width: 80px;background-color:#00000000; cursor:pointer;" id="changer-echelle">changer echelle</button><br>
+            <br>
+            <b>echelle = 1 / 1</b>
+            </div>
+            <div style="position:absolute;max-width:490px;max-height:335px;width:100%;height:100%;z-index:6456465; transform:translateX(32vw)" id="image_preview"></div>
+            <div class="preview-img" >
                 <div style="position: absolute;transform:translate(0,-180px)">||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</div>
-                <div><img src="image-placeholder.svg" style="postion:absolute " alt="preview-img"  ></div>
-                <div style="position:absolute;transform:translate(-35vw)"><div style="position: fixed;transform: rotate(90deg);">|||||||||||||||||||||||||||||||||||||||||||||||||</div></div>
+                <div><img src="image-placeholder.svg" alt="preview-img"  ></div>
+                <div style="position:absolute;transform:translate(-430px)"><div style="position: fixed;transform: rotate(90deg);">|||||||||||||||||||||||||||||||||||||||||||||||</div></div>
+                <p style="position: absolute;transform:translateY(220px)">Mouse position: <span id="position"></span></p>
             </div>
         </div>
         <div class="controls">
@@ -120,44 +136,83 @@
             </tr>
         </table>
         <script>
-            document.getElementById("addtable1").addEventListener('click',()=>{
-                let divtabe = document.createElement('tr')
-                divtabe.innerHTML = '<td></td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td><td></td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>'
-                let imgelem = document.createElement('div')
-                imgelem.className = 'item_ele';
-                imgelem.innerHTML = '<div  class="poste" style="postion:absolute;height:3px; width: 40px; background:#f00;border:1px solid black;" ></div>'
-                document.getElementById('image_preview').appendChild(imgelem)
-                document.getElementById('tab1cl').appendChild(divtabe);
+            const echelle = document.getElementById('echelle')
+            var val ;
+            document.getElementById('changer-echelle').addEventListener('click',()=>{
+                val = echelle.value;
+                console.log(val)
             })
+            var niche = 0 ;
+            var poste = 0 ;
+            var point = 0 ;
+            document.getElementById("addtable1").addEventListener('click',()=>{
+               dom_niche()
+            
+            })
+        
             document.getElementById("addtable2").addEventListener('click',()=>{
-                let divtabe = document.createElement('tr')
-                divtabe.innerHTML = '<td></td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td><td></td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>'
-                document.getElementById('tab1c2').appendChild(divtabe);
+                dom_poste()
+                
             })
             document.getElementById("addtable3").addEventListener('click',()=>{
-                let divtabe = document.createElement('tr')
-                divtabe.innerHTML = '<td></td><td><input type="number"></td><td><input type="number"></td><td></td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>'
-                document.getElementById('tab1c3').appendChild(divtabe);
+                dom_point()
+
             })
             document.getElementById("addtable4").addEventListener('click',()=>{
-                let divtabe = document.createElement('tr')
-                divtabe.innerHTML = '<td></td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td><td></td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>'
-                let imgelem = document.createElement('div')
-                imgelem.className = 'item_ele';
-                imgelem.innerHTML = '<div  class="poste" style="postion:absolute;height:3px; width: 40px; background:#f00;border:1px solid black; z-index:5555555555555555!important;" ></div>'
-                document.getElementById('image_preview').appendChild(imgelem)
-                document.getElementById('tab1cl').appendChild(divtabe);
+              dom_niche()
+            
+ 
             })
             document.getElementById("addtable5").addEventListener('click',()=>{
-                let divtabe = document.createElement('tr')
-                divtabe.innerHTML = '<td></td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td><td></td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>'
-                document.getElementById('tab1c2').appendChild(divtabe);
+                dom_poste()
             })
             document.getElementById("addtable6").addEventListener('click',()=>{
-                let divtabe = document.createElement('tr')
-                divtabe.innerHTML = '<td></td><td><input type="number"></td><td><input type="number"></td><td></td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>'
-                document.getElementById('tab1c3').appendChild(divtabe);
+                dom_point()
+
             })
+
+            function dom_niche(){
+                let divtabe = document.createElement('tr')
+                divtabe.innerHTML = '<td>N'+ niche +'</td><td><input type="number" value="2"></td><td><input type="number" value="'+ 0.01 * val +'"></td><td><input type="number" value="12"></td><td></td><td><input type="number" value="0"></td><td><input type="number" value="0" class="nx" id="'+ niche +'"></td><td><input type="number" value="0" class="ny"></td>'
+                    let imgelem = document.createElement('div')
+                    imgelem.className = 'postef';
+                    imgelem.id = 'item_ele_niche' + niche;
+                    imgelem.innerHTML = '<div  class="poste" style="cursor:pointer;"></div>'
+                    document.getElementById('image_preview').appendChild(imgelem)
+                    document.getElementById('tab1cl').appendChild(divtabe);
+                    niche = niche + 1;
+
+            }
+            function dom_poste(){
+
+                let divtabe = document.createElement('tr')
+                divtabe.innerHTML = '<td>P'+ poste +'</td><td><input type="number" value="1"></td><td><input type="number" value="150"></td><td><input type="number" value="1"></td><td></td><td><input type="number" value="0"></td><td><input type="number" value="0"></td><td><input type="number" value="0"></td>'
+                poste = poste + 1 ;
+                let imgelem = document.createElement('div')
+                imgelem.className = 'postef';
+                imgelem.id = 'item_ele_poste' + poste;
+                imgelem.innerHTML = '<div class="pouteau" style="cursor:pointer;"><div style="height:20px; width : 20px; background-color:white;position:absolute; transform:translate(14px,23px);border :1px solid black;"></div><div style="height:44px; width:12px; background-color:white;position:absolute; transform:translate(18px,10px);border :1px solid black;"></div><div style="height:12px; width:40px; background-color:white;position:absolute; transform:translate(5px,27px);border :1px solid black;"></div></div>'
+                document.getElementById('image_preview').appendChild(imgelem)
+                document.getElementById('tab1c2').appendChild(divtabe);
+            }
+            function dom_point(){
+                let divtabe = document.createElement('tr')
+                divtabe.innerHTML = '<td>PN'+ point +'</td><td><input type="number" value="'+ 0.001 * val +'"></td><td><input type="number" value="'+ 0.001 * val + '"></td><td></td><td><input type="number" value="0"></td><td><input type="number" value="0"></td><td><input type="number" value="0"></td>'
+                point = point + 1 ;
+                let imgelem = document.createElement('div')
+                imgelem.className = 'postef';
+                imgelem.id = 'item_ele_point' + point;
+                imgelem.innerHTML = '<div class="POINT-DE-COPURE" style="cursor:pointer;"></div>'
+                document.getElementById('image_preview').appendChild(imgelem);
+                document.getElementById('tab1c3').appendChild(divtabe);
+            }
+
+            document.addEventListener("mousemove", function (event) {
+                var positionElement = document.getElementById("position");
+                if(event.clientX > 654 && event.clientX < 1143 && event.clientY > 110 && event.clientY < 378)
+                positionElement.textContent = `X: ${event.clientX - 654}px, Y: ${event.clientY -110}px`;
+            });
+           
         </script>
         <style>
           .bottom_bod{
